@@ -1,0 +1,674 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#075f91">
+<meta name="description" content="PropNex Malaysia new joiner onboarding hub.">
+<title>PropNex Malaysia · New Joiner Hub</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%23075f91'/%3E%3Cpath d='M32 10 51 29H13z' fill='%230aa9e0'/%3E%3Cpath d='M13 33h38l-6 6H19zm8 10h22l-5 5H26zm8 9h6l-3 3z' fill='white'/%3E%3C/svg%3E">
+  <style>
+    :root{--cyan:#0aa9e0;--blue:#075f91;--navy:#063d64;--black:#231f20;--ink:#202a31;--muted:#667680;--line:#dce7ec;--pale:#eef8fc;--bg:#f4f8fa;--white:#fff;--warn:#fff7e7;--warnline:#f2c96b;--shadow:0 16px 48px rgba(6,61,100,.10)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:92px}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}a{color:inherit}button,input{font:inherit}.wrap{width:min(1120px,calc(100% - 36px));margin:auto}
+    .top{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.95);backdrop-filter:blur(14px);border-top:4px solid var(--cyan);border-bottom:1px solid var(--line)}.topin{height:72px;display:flex;align-items:center;gap:20px}.logo{width:190px;height:auto;display:block}.desk-nav{display:flex;gap:4px;margin-left:auto}.desk-nav a{text-decoration:none;color:#53626c;font-size:.88rem;font-weight:750;padding:9px 11px;border-radius:9px}.desk-nav a:hover{background:var(--pale);color:var(--blue)}.search{position:relative;width:220px}.search span{position:absolute;left:12px;top:8px;color:#7c8991}.search input{width:100%;border:1px solid var(--line);background:#f7fafb;border-radius:999px;padding:9px 14px 9px 36px;outline:none}.search input:focus{border-color:var(--cyan);box-shadow:0 0 0 3px rgba(10,169,224,.13)}
+    .welcome{padding:28px 0 18px}.welcome-card{border-radius:26px;overflow:hidden;background-image:linear-gradient(90deg,rgba(6,61,100,.98) 0%,rgba(6,61,100,.92) 48%,rgba(6,61,100,.35) 100%),url("https://d2pe9phj4tmsjo.cloudfront.net/uploads/images/About+Top+Background.png");background-size:cover;background-position:center;color:#fff;display:grid;grid-template-columns:1.35fr .65fr;box-shadow:var(--shadow)}.welcome-copy{padding:34px 38px}.kicker{text-transform:uppercase;font-size:.74rem;letter-spacing:.14em;font-weight:850;color:#7bd7f4}.welcome h1{font-size:clamp(2rem,5vw,3.55rem);line-height:1;letter-spacing:-.055em;margin:9px 0 13px}.welcome p{max-width:650px;margin:0;color:#dcecf3}.deadline{margin:18px 0 0;display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);padding:8px 12px;border-radius:10px;font-size:.88rem}.deadline b{color:#7bd7f4}.welcome-side{position:relative;display:grid;place-items:center;min-height:210px;background:linear-gradient(145deg,rgba(10,169,224,.22),rgba(0,0,0,.08))}.welcome-side:before,.welcome-side:after{content:"";position:absolute;transform:rotate(45deg);border:1px solid rgba(255,255,255,.22)}.welcome-side:before{width:180px;height:180px}.welcome-side:after{width:120px;height:120px}.step-mark{position:relative;z-index:2;text-align:center;text-shadow:0 2px 14px rgba(0,0,0,.35)}.step-mark strong{font-size:3.6rem;display:block;line-height:1}.step-mark span{font-size:.8rem;text-transform:uppercase;letter-spacing:.13em;color:#d6f3ff}
+    .dashboard{display:grid;grid-template-columns:1.4fr .6fr;gap:18px;margin:0 0 38px}.box{background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:0 5px 18px rgba(6,61,100,.04)}.check-box{padding:24px}.box-head{display:flex;align-items:start;justify-content:space-between;gap:18px}.box-head h2{margin:0;font-size:1.28rem;letter-spacing:-.025em}.box-head p{margin:4px 0 0;color:var(--muted);font-size:.88rem}.score{text-align:right;white-space:nowrap}.score strong{color:var(--blue);font-size:1.3rem}.score span{display:block;color:var(--muted);font-size:.74rem}.bar{height:7px;background:#e8f0f3;border-radius:20px;overflow:hidden;margin:17px 0}.bar i{display:block;width:0;height:100%;background:linear-gradient(90deg,var(--blue),var(--cyan));transition:.3s}.checks{display:grid;grid-template-columns:1fr 1fr;gap:7px 18px}.check{display:flex;align-items:center;gap:10px;padding:8px 4px;cursor:pointer;font-size:.91rem}.check input{width:18px;height:18px;accent-color:var(--blue);flex:0 0 auto}.check:has(input:checked) span{text-decoration:line-through;color:#99a3a9}.help-box{padding:24px;background:var(--pale);border-color:#c9eaf6}.help-box h3{margin:0 0 7px}.help-box p{font-size:.86rem;color:#4f6672;margin:0 0 14px}.primary{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;border-radius:11px;padding:11px 14px;background:var(--blue);color:#fff;font-weight:850;font-size:.88rem}.primary:hover{background:var(--navy)}
+    .journey-intro{display:grid;grid-template-columns:.85fr 1.15fr;min-height:290px;margin:0 0 24px;background:#fff;border-radius:24px;overflow:hidden;box-shadow:var(--shadow)}.journey-photo{min-height:290px;background:linear-gradient(180deg,rgba(6,61,100,.05),rgba(6,61,100,.45)),url("https://d2pe9phj4tmsjo.cloudfront.net/uploads/images/About+Second+Section.png") center/cover}.journey-route{padding:27px 30px}.journey-route .eyebrow,.eyebrow{font-size:.75rem;text-transform:uppercase;letter-spacing:.13em;font-weight:850;color:var(--cyan)}.journey-route h2{font-size:clamp(1.65rem,3vw,2.25rem);letter-spacing:-.045em;line-height:1.05;margin:7px 0 19px}.route-grid{display:grid;gap:8px}.route-card{display:grid;grid-template-columns:46px 1fr auto;align-items:center;gap:11px;text-decoration:none;background:#f5fafc;border:1px solid var(--line);border-radius:13px;padding:10px 12px;transition:.2s}.route-card:hover{transform:translateX(4px);border-color:#91d7ec;background:var(--pale)}.route-icon{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(145deg,var(--blue),var(--cyan));color:#fff;font-size:1.15rem}.route-card strong{display:block}.route-card span{color:var(--muted);font-size:.78rem}.route-card b{color:var(--cyan);font-size:1.15rem}.stage{scroll-margin-top:95px;margin:0 0 22px;background:#fff;border:1px solid var(--line);border-radius:24px;overflow:hidden;box-shadow:0 9px 28px rgba(6,61,100,.055)}.stage-head{display:grid;grid-template-columns:74px 1fr auto;align-items:center;gap:20px;padding:22px 24px;border-bottom:1px solid var(--line);background:linear-gradient(100deg,#fff 60%,#edf9fd)}.num{width:58px;height:58px;border-radius:17px;background:linear-gradient(145deg,var(--blue),var(--cyan));color:#fff;display:grid;place-items:center;font-size:1.25rem;font-weight:900;box-shadow:0 8px 20px rgba(7,95,145,.22)}.stage-head h2{margin:0;font-size:1.45rem;letter-spacing:-.03em}.stage-head p{margin:3px 0 0;color:var(--muted);font-size:.9rem}.stage-tag{font-size:.75rem;font-weight:850;text-transform:uppercase;letter-spacing:.08em;color:var(--blue);background:#dff5fc;padding:7px 10px;border-radius:999px}.stage-body{padding:22px 24px 26px}.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}.tile{position:relative;overflow:hidden;border:1px solid #e2edf1;border-radius:18px;padding:18px;display:flex;flex-direction:column;min-width:0;background:linear-gradient(145deg,#fff,#f7fbfc);box-shadow:0 8px 22px rgba(6,61,100,.055)}.tile:after{content:"";position:absolute;width:90px;height:90px;border-radius:50%;right:-38px;top:-46px;background:rgba(10,169,224,.08)}.tile.required{border-color:#9edcf0;background:linear-gradient(145deg,#effaff,#fff)}.tile-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px;position:relative;z-index:1}.icon{width:46px;height:46px;border-radius:14px;background:linear-gradient(145deg,var(--blue),var(--cyan));color:#fff;display:grid;place-items:center;font-size:1.25rem;box-shadow:0 7px 18px rgba(7,95,145,.18)}.badge{font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;font-weight:900;color:var(--blue);background:#dff5fc;border-radius:999px;padding:4px 7px}.tile h3{margin:0;font-size:1.02rem}.tile p{margin:5px 0 13px;color:var(--muted);font-size:.82rem;flex:1}.facts{display:grid;gap:6px;margin:0 0 14px}.fact{display:flex;gap:8px;align-items:start;font-size:.82rem}.fact b{color:var(--blue);min-width:54px}.actions{display:flex;gap:7px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;text-decoration:none;border:1px solid #a9dceb;color:var(--blue);background:#fff;padding:8px 10px;border-radius:9px;font-size:.8rem;font-weight:850}.btn:hover{background:var(--pale)}.detail-btn{border:0;background:none;color:var(--blue);font-weight:850;font-size:.8rem;padding:8px 3px;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+    .directory{scroll-margin-top:95px;margin:18px 0 0;padding:22px;border:1px solid #b9e5f3;border-radius:20px;background:linear-gradient(145deg,#f5fcff,#eaf7fc)}.directory-head{display:flex;align-items:end;justify-content:space-between;gap:18px;margin-bottom:15px}.directory-head h3{margin:0;font-size:1.2rem}.directory-head p{margin:3px 0 0;color:var(--muted);font-size:.82rem}.dept-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.dept-card{position:relative;display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:15px;padding:14px;min-width:0;box-shadow:0 5px 15px rgba(6,61,100,.04)}.dept-icon{width:35px;height:35px;border-radius:10px;display:grid;place-items:center;background:var(--pale);font-size:1rem;margin-bottom:8px}.dept-card h4{margin:0;font-size:.92rem}.dept-card p{margin:4px 0 10px;color:var(--muted);font-size:.75rem;line-height:1.4;flex:1}.dept-card .actions{gap:5px}.dept-card .btn{font-size:.73rem;padding:7px 8px}.directory-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:14px;color:var(--muted);font-size:.76rem}
+    .group-block{border:1px solid var(--line);border-radius:15px;overflow:hidden}.group-block+.group-block{margin-top:9px}.group-block summary{cursor:pointer;list-style:none;padding:15px 17px;display:flex;justify-content:space-between;align-items:center;font-weight:850}.group-block summary::-webkit-details-marker{display:none}.group-block summary:after{content:"+";font-size:1.35rem;color:var(--cyan)}.group-block[open] summary:after{content:"−"}.group-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;padding:0 13px 13px}.group{background:#f7fafb;border-radius:12px;padding:13px}.group h4{margin:0 0 3px;font-size:.9rem}.group p{margin:0 0 9px;color:var(--muted);font-size:.78rem}.group .actions{gap:5px}
+    .sop{margin-top:16px;border-top:1px solid var(--line)}.sop details{border-bottom:1px solid var(--line)}.sop summary{cursor:pointer;list-style:none;padding:15px 36px 15px 3px;font-weight:850;position:relative}.sop summary::-webkit-details-marker{display:none}.sop summary:after{content:"+";position:absolute;right:7px;color:var(--cyan);font-size:1.25rem}.sop details[open] summary:after{content:"−"}.sop-content{padding:0 4px 18px;color:#4c5c65;font-size:.9rem}.sop-content h4{color:var(--ink);margin:15px 0 6px}.sop-content p{margin:6px 0}.sop-content ul,.sop-content ol{padding-left:20px}.sop-content li{margin:5px 0}.note{background:var(--pale);border-left:4px solid var(--cyan);padding:11px 13px;border-radius:0 10px 10px 0;margin:11px 0}.warning{background:var(--warn);border-left-color:var(--warnline)}
+    .important{margin:34px 0;display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;background:var(--black);color:#fff;border-radius:22px;padding:25px}.important h2{margin:0;font-size:1.3rem}.important p{margin:5px 0 0;color:#d5d5d5;font-size:.88rem}.important .primary{background:var(--cyan);color:#062d43}.faq{margin-bottom:90px}.faq h2{letter-spacing:-.03em}.faq details{background:#fff;border:1px solid var(--line);border-radius:13px;margin:8px 0}.faq summary{cursor:pointer;padding:15px 17px;font-weight:850}.answer{padding:0 17px 16px;color:var(--muted);font-size:.9rem}.empty{display:none;text-align:center;background:#fff;border:1px dashed #b8cad3;border-radius:18px;padding:36px;color:var(--muted);margin:20px 0}.hidden{display:none!important}.mobile-nav{display:none}.footer{background:var(--black);border-top:5px solid var(--cyan);color:#fff;padding:26px 0}.footerin{display:flex;justify-content:space-between;gap:20px;align-items:center}.footer small{color:#afb9bd}
+    @media(max-width:900px){.desk-nav{display:none}.welcome-card,.dashboard{grid-template-columns:1fr}.welcome-side{display:none}.journey-intro{grid-template-columns:.7fr 1.3fr}.tiles,.dept-grid{grid-template-columns:1fr 1fr}.search{margin-left:auto}.stage-tag{display:none}}
+    @media(max-width:620px){body{padding-bottom:72px}.wrap{width:min(100% - 26px,1120px)}.topin{height:62px}.logo{width:155px}.search{width:44px}.search input{height:40px;padding:0;color:transparent;background:#f3f8fa}.search input::placeholder{color:transparent}.search span{left:15px}.welcome{padding:14px 0}.welcome-card{border-radius:19px;background-position:58% center}.welcome-copy{padding:24px 20px}.welcome h1{font-size:2.28rem}.deadline{font-size:.8rem}.dashboard{margin-bottom:24px}.check-box,.help-box{padding:18px}.checks{grid-template-columns:1fr}.box-head{align-items:center}.journey-intro{grid-template-columns:1fr;border-radius:19px}.journey-photo{min-height:165px}.journey-route{padding:20px}.journey-route h2{font-size:1.7rem}.route-card{grid-template-columns:42px 1fr auto}.stage{border-radius:19px}.stage-head{grid-template-columns:50px 1fr;gap:13px;padding:18px}.num{width:48px;height:48px;border-radius:14px}.stage-head h2{font-size:1.18rem}.stage-body{padding:16px}.tiles,.dept-grid{grid-template-columns:1fr}.directory{padding:15px}.directory-head,.directory-foot{align-items:flex-start;flex-direction:column}.group-grid{grid-template-columns:1fr}.important{grid-template-columns:1fr;padding:20px}.footer{display:none}.mobile-nav{display:grid;grid-template-columns:repeat(3,1fr);position:fixed;bottom:0;left:0;right:0;z-index:40;background:rgba(255,255,255,.96);border-top:1px solid var(--line);padding:7px 10px calc(7px + env(safe-area-inset-bottom));backdrop-filter:blur(13px)}.mobile-nav a{text-align:center;text-decoration:none;color:#657680;font-size:.69rem;font-weight:800}.mobile-nav b{display:block;font-size:1.1rem;line-height:1.1;color:var(--blue)}}
+    .dashboard{margin-left:auto;margin-right:auto}
+    .form-action{border:2px solid var(--cyan)!important;background:linear-gradient(145deg,#f4fcff,#e5f7fd)!important;box-shadow:0 10px 28px rgba(10,169,224,.14)}
+    .form-action h3{font-size:1.08rem}.form-steps{display:grid;gap:7px;margin:2px 0 15px}.form-step{display:flex;align-items:center;gap:9px;font-size:.82rem;font-weight:750}.form-step b{width:22px;height:22px;border-radius:50%;display:grid;place-items:center;background:var(--blue);color:#fff;font-size:.7rem;flex:0 0 auto}.form-action .actions{margin-top:auto}
+  </style>
+</head>
+<body>
+  <header class="top">
+<div class="wrap topin">
+<img class="logo" src="assets/propnex-malaysia-logo.png" alt="PropNex Malaysia">
+<nav class="desk-nav">
+<a href="#checklist">To Do</a>
+<a href="#stage1">Groups &amp; Contacts</a>
+<a href="#stage2">Registration</a>
+<a href="#stage3">Rules &amp; FAQ</a>
+</nav>
+<label class="search">
+<span>⌕</span>
+<input id="search" type="search" placeholder="Search…" aria-label="Search welcome kit">
+</label>
+</div>
+</header>
+  <main>
+    <section class="welcome">
+<div class="wrap">
+<div class="welcome-card">
+<div class="welcome-copy">
+<div class="kicker">PropNex Malaysia · New Joiner Hub</div>
+<h1>Welcome, New PropNexian.</h1>
+<p>Follow your onboarding journey, complete the required steps and find every important link in one place.</p>
+<div class="deadline">
+<b>First priority</b> Complete the required items within 3 working days.</div>
+</div>
+<div class="welcome-side">
+<div class="step-mark">
+<strong>3</strong>
+<span>simple stages</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+    <section class="wrap dashboard" id="checklist" data-search="checklist onboarding required progress">
+<div class="box check-box">
+<div class="box-head">
+<div>
+<h2>Complete these 7 onboarding steps</h2>
+<p>Tick each box only after you have completed the action. Your progress is saved on this device.</p>
+</div>
+<div class="score">
+<strong id="score">0 of 7</strong>
+<span>completed</span>
+</div>
+</div>
+<div class="bar">
+<i id="fill">
+</i>
+</div>
+<div class="checks" id="checks">
+<label class="check">
+<input type="checkbox" data-key="groups">
+<span>Join the 3 required WhatsApp groups</span>
+</label>
+<label class="check">
+<input type="checkbox" data-key="directory">
+<span>Save the contact for the department you may need</span>
+</label>
+<label class="check">
+<input type="checkbox" data-key="photo">
+<span>Register for your official corporate photoshoot</span>
+</label>
+<label class="check">
+<input type="checkbox" data-key="ren">
+<span>Prepare and submit your REN / PEA documents</span>
+</label>
+<label class="check">
+<input type="checkbox" data-key="forms">
+<span>Download, sign and email the mandatory form</span>
+</label>
+<label class="check">
+<input type="checkbox" data-key="card">
+<span>Check when you are eligible to order your name card</span>
+</label>
+<label class="check">
+<input type="checkbox" data-key="pdpa">
+<span>Read and understand the PDPA compliance rules</span>
+</label>
+</div>
+</div>
+<aside class="box help-box">
+<h3>Need help?</h3>
+<p>Contact Negotiator Affairs for onboarding, REN, PEA, reassignment or name card enquiries.</p>
+<a class="primary" href="https://wa.me/60123088954">WhatsApp NA ↗</a>
+<p style="margin-top:12px">8:00 AM–5:00 PM<br>Lunch: 12:00–1:00 PM</p>
+</aside>
+</section>
+    <section class="wrap">
+<section class="journey-intro" aria-label="Your onboarding journey">
+<div class="journey-photo" role="img" aria-label="PropNex Malaysia awards celebration"></div>
+<div class="journey-route">
+<div class="eyebrow">Your onboarding journey</div>
+<h2>Start with these 3 steps.</h2>
+<div class="route-grid">
+<a class="route-card" href="#stage1"><span class="route-icon">💬</span><span><strong>Get connected</strong>Groups, contacts and training</span><b>→</b></a>
+<a class="route-card" href="#stage2"><span class="route-icon">✓</span><span><strong>Complete your setup</strong>Registration, photo and form</span><b>→</b></a>
+<a class="route-card" href="#stage3"><span class="route-icon">◆</span><span><strong>Know the rules</strong>Renewal, reassignment and PDPA</span><b>→</b></a>
+</div>
+</div>
+</section>
+      <article class="stage" id="stage1" data-search="connect whatsapp groups listing announcement project open house directory propnex u training">
+<div class="stage-head">
+<div class="num">01</div>
+<div>
+<h2>Get Connected</h2>
+<p>Join the right channels and know where to find support.</p>
+</div>
+<span class="stage-tag">Start here</span>
+</div>
+<div class="stage-body">
+        <div class="tiles">
+<section class="tile required">
+<div class="tile-top">
+<span class="icon">💬</span>
+<span class="badge">Required</span>
+</div>
+<h3>WhatsApp Groups</h3>
+<p>Announcements · Training · NA updates</p>
+<button class="detail-btn" data-open="groups">View group categories ↓</button>
+</section>
+<section class="tile">
+<div class="tile-top">
+<span class="icon">☎</span>
+</div>
+<h3>Department Directory</h3>
+<p>Find the right department instantly.</p>
+<div class="actions">
+<a class="btn" href="#department-contacts">Choose a department ↓</a>
+</div>
+</section>
+<section class="tile">
+<div class="tile-top">
+<span class="icon">▶</span>
+</div>
+<h3>PropNex U</h3>
+<p>Your online training platform.</p>
+<div class="actions">
+<a class="btn" href="https://u-mypropnex.thinkific.com/">Open platform ↗</a>
+<a class="btn" href="https://drive.google.com/file/d/1w5qFhiAF6hViMpE2cfNBq9QhRIOL5Bz8/view?usp=drive_link">Guidelines ↗</a>
+</div>
+</section>
+</div>
+        <section class="directory" id="department-contacts" data-search="department contact hotline negotiator affairs admin subsales claim sector project event training operations it marketing">
+<div class="directory-head">
+<div>
+<h3>Who should I contact?</h3>
+<p>Pick the topic that matches your question, then tap the contact button.</p>
+</div>
+<span class="badge">Direct contacts</span>
+</div>
+<div class="dept-grid">
+<article class="dept-card">
+<div class="dept-icon">👋</div>
+<h4>Negotiator Affairs (NA)</h4>
+<p>Joining · REN/PEA · Photoshoot · Name cards</p>
+<div class="actions">
+<a class="btn" href="https://wa.me/60123088954">WhatsApp NA ↗</a>
+<a class="btn" href="mailto:hr@propnexmalaysia.net">Email</a>
+</div>
+</article>
+<article class="dept-card">
+<div class="dept-icon">🏢</div>
+<h4>Administration</h4>
+<p>Office · Courier · LOF · Merchandise</p>
+<div class="actions">
+<a class="btn" href="tel:+60379542233">Call 03-7954 2233</a>
+<a class="btn" href="mailto:info@propnex.com">Email</a>
+</div>
+</article>
+<article class="dept-card">
+<div class="dept-icon">🏠</div>
+<h4>Subsales — Sales &amp; Claims</h4>
+<p>Cases · LOF · Claims · Payout</p>
+<div class="actions">
+<a class="btn" href="https://wa.me/60176384941">Sales</a>
+<a class="btn" href="https://wa.me/60176552308">Claims</a>
+</div>
+</article>
+<article class="dept-card">
+<div class="dept-icon">📍</div>
+<h4>Subsales — Sector</h4>
+<p>Open house · Auction · Sector training</p>
+<div class="actions">
+<a class="btn" href="https://wa.me/60127922527">WhatsApp Sector ↗</a>
+<a class="btn" href="mailto:propnexsubsales@propnexmalaysia.net">Email</a>
+</div>
+</article>
+<article class="dept-card">
+<div class="dept-icon">🏗️</div>
+<h4>Project Sales &amp; Claims</h4>
+<p>Submission · Booking · Claims · Payout</p>
+<div class="actions">
+<a class="btn" href="https://wa.me/60177017954">Project Sales</a>
+<a class="btn" href="https://wa.me/60126533241">Project Claims</a>
+</div>
+</article>
+<article class="dept-card">
+<div class="dept-icon">🎓</div>
+<h4>Event &amp; Training</h4>
+<p>Registration · Schedule · Event updates</p>
+<div class="actions">
+<a class="btn" href="https://wa.me/60179497954">Hotline 1</a>
+<a class="btn" href="https://wa.me/60129855066">Hotline 2</a>
+</div>
+</article>
+<article class="dept-card">
+<div class="dept-icon">⚙️</div>
+<h4>Operations</h4>
+<p>Overriding · Awards · SOP · Listings · Branches</p>
+<div class="actions">
+<a class="btn" href="https://wa.me/60129577464">Najwa</a>
+<a class="btn" href="https://wa.me/601111406766">Tasha</a>
+<a class="btn" href="https://wa.me/60147220434">Winnie</a>
+<a class="btn" href="https://wa.me/60122127081">Kame</a>
+<a class="btn" href="https://wa.me/60129132231">Yaya</a>
+</div>
+</article>
+<article class="dept-card">
+<div class="dept-icon">💻</div>
+<h4>IT Support</h4>
+<p>Portal · PropNex app · VOM · Sales Suites</p>
+<div class="actions">
+<a class="btn" href="https://wa.me/60126008954">WhatsApp IT ↗</a>
+<a class="btn" href="mailto:operations@propnexmalaysia.net">Email</a>
+</div>
+</article>
+<article class="dept-card">
+<div class="dept-icon">🎨</div>
+<h4>Marketing</h4>
+<p>Posters · Videos · Studio rental</p>
+<div class="actions">
+<a class="btn" href="https://wa.me/60126056467">WhatsApp Marketing ↗</a>
+</div>
+</article>
+</div>
+<div class="directory-foot">
+<span>Not sure who to contact? Ask Negotiator Affairs first.</span>
+<a class="btn" href="https://drive.google.com/file/d/1bDeXcCd6XlvXkzJ4FjkEq42_n6iBpwi7/view?usp=drive_link">View full directory PDF ↗</a>
+</div>
+</section>
+        <div id="groups" style="margin-top:16px">
+<details class="group-block" open>
+<summary>Essential company channels</summary>
+<div class="group-grid">
+<div class="group">
+<h4>📣 PropNex Announcement</h4>
+<p>Important company announcements.</p>
+<a class="btn" href="https://chat.whatsapp.com/BfPILKjP6rF5ccClgMdH34">Join group ↗</a>
+</div>
+<div class="group">
+<h4>🎓 Event & Training</h4>
+<p>Company event and training updates.</p>
+<div class="actions">
+<a class="btn" href="https://chat.whatsapp.com/BxqttUdO0qe6AikUBOSPFD">Group 1</a>
+<a class="btn" href="https://chat.whatsapp.com/BKffByAAYk63phIqPJC0VP">Group 2</a>
+</div>
+</div>
+<div class="group">
+<h4>🤝 Negotiator Affairs Updates</h4>
+<p>HQ REN matters.</p>
+<a class="btn" href="https://chat.whatsapp.com/LGshnxSxA8SGDrjroJBvI1">Join group ↗</a>
+</div>
+</div>
+</details>
+        <details class="group-block">
+<summary>Sales & listings</summary>
+<div class="group-grid">
+<div class="group">
+<h4>📢 PropNex ABC Listing</h4>
+<p>Relevant to sales.</p>
+<div class="actions">
+<a class="btn" href="https://chat.whatsapp.com/EJ1hM606bPaIckZpQ6KyFx">Group 1</a>
+<a class="btn" href="https://chat.whatsapp.com/DUOZnY0CxZ1BpwmjosolYk">Group 2</a>
+<a class="btn" href="https://chat.whatsapp.com/Cniecpa9FmnEzdO7McPfkN">Group 3</a>
+</div>
+</div>
+<div class="group">
+<h4>🏡 PropNex Listing</h4>
+<p>Open listings and internal co-agency.</p>
+<div class="actions">
+<a class="btn" href="https://chat.whatsapp.com/F9FgeQpi8SsGcJS9gSicEA">Group 1</a>
+<a class="btn" href="https://chat.whatsapp.com/EHud9KS4QRrIF4LdzjkdgT?s=cl&p=a&mlu=4&ilr=4">Group 2</a>
+<a class="btn" href="https://chat.whatsapp.com/ChhKZpfsuB1GPIDeQZRPpi">Group 3</a>
+</div>
+</div>
+</div>
+</details>
+        <details class="group-block">
+<summary>Projects & open house</summary>
+<div class="group-grid">
+<div class="group">
+<h4>📊 PropNex × Project</h4>
+<p>Project briefings and related updates.</p>
+<div class="actions">
+<a class="btn" href="https://chat.whatsapp.com/GnUec1ERU7WA6SyEQEpmd9">Group 1</a>
+<a class="btn" href="https://chat.whatsapp.com/CLgkGnUAKOpAbbC2ZP3C24">Group 2</a>
+</div>
+</div>
+<div class="group">
+<h4>🚪 PropNex × Open House</h4>
+<p>For open-house hosts and participants.</p>
+<a class="btn" href="https://chat.whatsapp.com/CfqMqqBsqwh55osDPyJKwC?s=sw&p=a&mlu=4&ilr=4">Join group ↗</a>
+</div>
+</div>
+</details>
+        <details class="group-block">
+<summary>Area & sector focus teams</summary>
+<div class="group-grid">
+<div class="group">
+<h4>🏡 Area Focus Team</h4>
+<p>Open listings, co-broke opportunities and updates.</p>
+<a class="btn" href="https://chat.whatsapp.com/LvIECiHw4L55nWAn5AlaDn">Join group ↗</a>
+</div>
+<div class="group">
+<h4>📍 Sector Focus Team</h4>
+<p>Open listings, co-broke and sector briefings.</p>
+<a class="btn" href="https://chat.whatsapp.com/D8GnG2Vbt5O8Y2zTpqDDKB">Join group ↗</a>
+</div>
+</div>
+</details>
+</div>
+      </div>
+</article>
+      <article class="stage" id="stage2" data-search="setup photoshoot name card REN PEA application forms Malaysian non Malaysian">
+<div class="stage-head">
+<div class="num">02</div>
+<div>
+<h2>Complete Your Setup</h2>
+<p>Finish your profile, registration and mandatory paperwork.</p>
+</div>
+<span class="stage-tag">Action required</span>
+</div>
+<div class="stage-body">
+        <div class="tiles">
+<section class="tile required">
+<div class="tile-top">
+<span class="icon">📷</span>
+<span class="badge">Within 1 month</span>
+</div>
+<h3>Corporate Photoshoot</h3>
+<div class="facts">
+<div class="fact">
+<b>When</b>
+<span>Tuesdays, 11:00 AM–1:00 PM</span>
+</div>
+<div class="fact">
+<b>Where</b>
+<span>B-21-3, Block B, Jaya One</span>
+</div>
+<div class="fact">
+<b>Attire</b>
+<span>White shirt, black bottom, covered black shoes</span>
+</div>
+</div>
+<div class="actions">
+<a class="primary" href="https://forms.gle/B93D1Xa5xJb9Tkhw5">Register now ↗</a>
+</div>
+</section>
+<section class="tile required">
+<div class="tile-top">
+<span class="icon">✓</span>
+<span class="badge">Required</span>
+</div>
+<h3>REN / PEA Application</h3>
+<p>Find the correct application route.</p>
+<button class="detail-btn" data-open="applications">View application SOP ↓</button>
+</section>
+<section class="tile required form-action">
+<div class="tile-top">
+<span class="icon">✎</span>
+<span class="badge">Must Complete</span>
+</div>
+<h3>Form to Complete</h3>
+<p>Every new joiner must complete and return the Acknowledgement &amp; Indemnity Form.</p>
+<div class="form-steps">
+<div class="form-step"><b>1</b><span>Download the form</span></div>
+<div class="form-step"><b>2</b><span>Fill in and sign</span></div>
+<div class="form-step"><b>3</b><span>Email the completed form back to NA</span></div>
+</div>
+<div class="actions">
+<a class="primary" href="https://drive.google.com/file/d/1hIIyO7xeFzy7l_z6sBQHltCpIcA282SR/view?usp=drive_link">Download form ↗</a>
+<a class="btn" href="mailto:hr@propnexmalaysia.net?subject=Completed%20Mandatory%20Form">Email completed form ↗</a>
+</div>
+</section>
+</div>
+        <div class="sop" id="applications">
+<details>
+<summary>REN application · Malaysian</summary>
+<div class="sop-content">
+<h4>Prepare these documents</h4>
+<p>NCC certificate · Contract for Service · NRIC front and back · Passport photo · Education certificate · Recent bankruptcy report.</p>
+<div class="note">Generate the bankruptcy report only after signing your Contract for Service.</div>
+<ol>
+<li>Attend and pass the 2-day NCC with an LPEPH-appointed association.</li>
+<li>Send the NCC certificate to NA and complete the Contract for Service.</li>
+<li>Return all complete documents. NA submits through BIS LPEPH.</li>
+<li>NA informs you after approval and shares the business card order link.</li>
+</ol>
+</div>
+</details>
+        <details>
+<summary>REN application · Non-Malaysian</summary>
+<div class="sop-content">
+<p>Prepare the NCC certificate, Contract for Service, passport main and visa pages, work permit, passport photo, Diploma or higher, bankruptcy report and Statutory Declaration.</p>
+<div class="note warning">
+<strong>Mandatory:</strong> Work permit must state “Real Estate Negotiator at PropNex Realty Sdn Bhd”. Only Resident Passes and Spouse Visas are accepted.</div>
+<p>You apply for the work permit yourself. NA provides the supporting documents required by Immigration.</p>
+</div>
+</details>
+        <details>
+<summary>PEA application</summary>
+<div class="sop-content">
+<p>All documents must be Certified True Copy by the Agency Principal.</p>
+<p>Prepare the recognised real estate education certificate, Contract for Service, NRIC, birth certificate, transcript, Form B1 and Form TPC (EA) 1/96.</p>
+<ol>
+<li>Send education certificate to NA and sign the prepared contract.</li>
+<li>Complete B1 and TPC forms and return all documents.</li>
+<li>NA arranges signature and CTC by the Agency Principal.</li>
+<li>Submit returned soft copies through your BIS account.</li>
+<li>Collect two hard-copy sets and submit them physically to LPEPH.</li>
+<li>Follow up with LPEPH until approval.</li>
+</ol>
+</div>
+</details>
+        <details>
+<summary>Name Card SOP</summary>
+<div class="sop-content">
+<h4>Before ordering</h4>
+<ol>
+<li>Active REN, PEA or E number.</li>
+<li>Reassignment to PropNex approved by LPEPH.</li>
+<li>Official corporate photoshoot completed.</li>
+</ol>
+<p>
+<strong>Weekly cut-off:</strong> Wednesday, 12:00 noon. Artwork and printing request: Thursday. Printing takes up to 7 working days after confirmation.</p>
+<p>
+<strong>First order:</strong> 2 boxes free. Reprints: 2 boxes RM45 · 3 boxes RM55 · 4 boxes RM67 · 5 boxes RM75 · 10 boxes RM127.</p>
+<div class="note">Payment: PropNex Realty Sdn Bhd · OCBC 7871137302. Payments are non-refundable, non-transferable and non-deferrable.</div>
+</div>
+</details>
+</div>
+      </div>
+</article>
+      <article class="stage" id="stage3" data-search="rules reassignment renewal REN PEA REA PDPA privacy compliance FAQ">
+<div class="stage-head">
+<div class="num">03</div>
+<div>
+<h2>Know the Rules</h2>
+<p>Understand reassignment, renewal and data-protection responsibilities.</p>
+</div>
+<span class="stage-tag">Keep for reference</span>
+</div>
+<div class="stage-body">
+        <div class="tiles">
+<section class="tile">
+<div class="tile-top">
+<span class="icon">⇄</span>
+</div>
+<h3>Reassignment</h3>
+<p>Moving to PropNex from another agency.</p>
+<button class="detail-btn" data-open="rules">View reassignment SOP ↓</button>
+</section>
+<section class="tile">
+<div class="tile-top">
+<span class="icon">↻</span>
+</div>
+<h3>Licence Renewal</h3>
+<p>October to March.</p>
+<button class="detail-btn" data-open="rules">View renewal rules ↓</button>
+</section>
+<section class="tile required">
+<div class="tile-top">
+<span class="icon">⚿</span>
+<span class="badge">Mandatory</span>
+</div>
+<h3>PDPA Compliance</h3>
+<p>Consent · Privacy · Opt-outs</p>
+<a class="btn" href="https://drive.google.com/file/d/1ks0U7xJsPzaVBvD1OkX4sbBSpl0rRKC9/view?usp=drive_link">Read full memo ↗</a>
+</section>
+</div>
+        <div class="sop" id="rules">
+<details>
+<summary>REN reassignment · Active & inactive</summary>
+<div class="sop-content">
+<h4>Active REN</h4>
+<ol>
+<li>Resign and follow up until detached from your current agency in the system.</li>
+<li>Inform NA once LPEPH approves the resignation.</li>
+<li>Sign the Contract for Service and provide the RM100 fee slip.</li>
+<li>NA submits via BIS and informs you after approval.</li>
+</ol>
+<h4>Inactive REN</h4>
+<p>Re-sit NCC, send the new certificate to NA, then return the signed contract, recent bankruptcy report and RM100 fee slip.</p>
+<div class="note">CIMB 8010632400 · Remark: Reassign fee</div>
+</div>
+</details>
+        <details>
+<summary>PEA reassignment</summary>
+<div class="sop-content">
+<ol>
+<li>Submit resignation through your personal BIS account.</li>
+<li>Email wan@lpeph.gov.my with the resignation letter and BIS screenshot.</li>
+<li>Sign the Contract for Service and complete Form TPC (EA) 3/96.</li>
+<li>Resubmit through BIS and email LPEPH to request approval.</li>
+<li>NA shares the business card link after approval.</li>
+</ol>
+</div>
+</details>
+        <details>
+<summary>REN renewal</summary>
+<div class="sop-content">
+<div class="note">
+<strong>Approved Jan–Sep:</strong> Attend RRP in the current year.<br>
+<strong>Approved Oct–Dec:</strong> Attend RRP the following year, subject to LPEPH policy.</div>
+<p>
+<strong>Active:</strong> Attend RRP between May and December, send the certificate to NA, and wait for NA before generating the bankruptcy report.</p>
+<p>
+<strong>Inactive:</strong> Re-sit NCC and complete the contract plus recent bankruptcy report. The RM100 fee only applies if LPEPH removed you from the agency BIS system.</p>
+</div>
+</details>
+        <details>
+<summary>PEA & REA renewal</summary>
+<div class="sop-content">
+<p>
+<strong>PEA active:</strong> Complete 5 CPD hours—minimum 3 physical and 2 online, with no carry-forward. Submit through BIS after renewals open.</p>
+<p>
+<strong>PEA inactive:</strong> Confirm fees with LPEPH, complete Forms D1 and F, and submit the CPD certificate, bankruptcy declaration and payment slip.</p>
+<p>
+<strong>REA:</strong> Renew before 15 October. Below 55: 10 CPD hours, minimum 5 physical + 5 online. Above 55: 5 hours, minimum 3 physical + 2 online. Up to 5 carry-forward hours are allowed.</p>
+</div>
+</details>
+        <details>
+<summary>PDPA: immediate actions</summary>
+<div class="sop-content">
+<ul>
+<li>Delete prospect data immediately after an opt-out request and do not contact them again.</li>
+<li>Include a clear way to unsubscribe from marketing messages.</li>
+<li>Obtain direct consent before adding a prospect to a broadcast list.</li>
+<li>Never circulate prospect contact lists without explicit consent.</li>
+<li>Password-protect devices and limit data collection to what is necessary.</li>
+</ul>
+</div>
+</details>
+</div>
+      </div>
+</article>
+      <section class="important" data-search="mandatory form submit HR contact">
+<div>
+<h2>Mandatory: return your completed form</h2>
+<p>Download, fill in and sign the form, then email the completed copy to hr@propnexmalaysia.net. You may also contact Negotiator Affairs at 012-380 8954.</p>
+</div>
+<div class="actions">
+<a class="primary" href="https://drive.google.com/file/d/1hIIyO7xeFzy7l_z6sBQHltCpIcA282SR/view?usp=drive_link">Download form ↗</a>
+<a class="primary" href="mailto:hr@propnexmalaysia.net?subject=Completed%20Mandatory%20Form">Email form ↗</a>
+</div>
+</section>
+      <section class="faq" id="faq" data-search="FAQ certified negotiator NCC SPM refund bankrupt education onboarding application status photoshoot form whatsapp official announcement">
+<div class="eyebrow">Quick answers</div>
+<h2>Frequently Asked Questions</h2>
+<details>
+<summary>How do I become a Certified Real Estate Negotiator?</summary>
+<div class="answer">You must be at least 18, hold an accepted minimum education qualification, meet the insolvency requirements, complete NCC and be attached to a licensed agency. Non-Malaysians require an accepted visa and correct work permit.</div>
+</details>
+<details>
+<summary>Where can I complete NCC?</summary>
+<div class="answer">Choose an association officially appointed by LPEPH. The two-day programme fee stated in this guide is RM648 inclusive of 8% SST.</div>
+</details>
+<details>
+<summary>When can I get my business card?</summary>
+<div class="answer">After your active registration and reassignment are approved and you have completed the official corporate photoshoot.</div>
+</details>
+<details>
+<summary>Can SPM Bahagian 3 or SAP be used?</summary>
+<div class="answer">No. LPEPH accepts SPM Bahagian 1 or 2. Ask an APEL provider about possible alternative qualification routes.</div>
+</details>
+<details>
+<summary>Can I get a refund if my education certificate cannot be used?</summary>
+<div class="answer">No. The RM388 joining fee is strictly non-refundable.</div>
+</details>
+<details>
+<summary>Can a bankrupt applicant apply as a REN?</summary>
+<div class="answer">Potentially, with supporting documents required by the Department of Insolvency. Final approval remains at LPEPH’s discretion. Contact NA for the current document list.</div>
+</details>
+<details>
+<summary>What should I complete within my first 3 working days?</summary>
+<div class="answer">Join the required WhatsApp groups, review the Department Directory, complete and return the mandatory form, read the PDPA memo, and begin the relevant REN or PEA application process.</div>
+</details>
+<details>
+<summary>Who should I contact if I am unsure which application process applies to me?</summary>
+<div class="answer">Contact the Negotiator Affairs Department before submitting any documents. They will confirm the correct process based on your nationality and registration status.</div>
+</details>
+<details>
+<summary>When should I generate my Bankruptcy Report?</summary>
+<div class="answer">Only generate it after signing your Contract for Service or when the Negotiator Affairs Department instructs you to do so. LPEPH requires a recent copy.</div>
+</details>
+<details>
+<summary>How can I check the status of my REN application?</summary>
+<div class="answer">The Negotiator Affairs Department will notify you through WhatsApp after your application is submitted and when LPEPH provides an update or approval.</div>
+</details>
+<details>
+<summary>Is the corporate photoshoot compulsory?</summary>
+<div class="answer">Yes. Your official corporate photo is required for your system profile, business card, marketing materials and milestone recognition posters.</div>
+</details>
+<details>
+<summary>How do I submit the mandatory Acknowledgement &amp; Indemnity Form?</summary>
+<div class="answer">Download the form, complete and sign it, then email the completed copy to hr@propnexmalaysia.net. Keep a copy for your own reference.</div>
+</details>
+<details>
+<summary>Which WhatsApp groups are compulsory to join?</summary>
+<div class="answer">At minimum, join the PropNex Announcement, Event &amp; Training, and Negotiator Affairs Updates groups. Other groups may be joined based on your business focus.</div>
+</details>
+<details>
+<summary>What should I do if this Welcome Kit differs from the latest company announcement?</summary>
+<div class="answer">Always follow the latest official company announcement or memo. If you are unsure, verify with the relevant department before taking action.</div>
+</details>
+</section>
+<div class="empty" id="empty">No result found. Try “REN”, “photoshoot”, “renewal” or “PDPA”.</div>
+    </section>
+  </main>
+  <footer class="footer">
+<div class="wrap footerin">
+<strong>PropNex Malaysia · New Joiner Hub</strong>
+<small>Always refer to the latest official memo or contact Negotiator Affairs if information differs.</small>
+</div>
+</footer>
+  <nav class="mobile-nav">
+<a href="#stage1">
+<b>⌂</b>Home</a>
+<a href="#checklist">
+<b>✓</b>Checklist</a>
+<a href="https://wa.me/60123088954">
+<b>◉</b>Contact NA</a>
+</nav>
+  <script>
+    document.querySelectorAll('a[href^="http"]').forEach(a=>{a.target='_blank';a.rel='noopener noreferrer'});
+    const boxes=[...document.querySelectorAll('#checks input')],saved=JSON.parse(localStorage.getItem('pn-welcome-progress')||'{}');
+    function update(){const n=boxes.filter(b=>b.checked).length;document.querySelector('#score').textContent=n+' of '+boxes.length;document.querySelector('#fill').style.width=Math.round(n/boxes.length*100)+'%'}
+    boxes.forEach(b=>{b.checked=!!saved[b.dataset.key];b.addEventListener('change',()=>{saved[b.dataset.key]=b.checked;localStorage.setItem('pn-welcome-progress',JSON.stringify(saved));update()})});update();
+    document.querySelectorAll('[data-open]').forEach(btn=>btn.addEventListener('click',()=>{const el=document.getElementById(btn.dataset.open);el.scrollIntoView({behavior:'smooth',block:'start'});const d=el.querySelector('details');if(d)d.open=true}));
+    const search=document.querySelector('#search'),items=[...document.querySelectorAll('[data-search]')],empty=document.querySelector('#empty');
+    search.addEventListener('input',()=>{const q=search.value.trim().toLowerCase();let n=0;items.forEach(el=>{const ok=!q||(el.dataset.search+' '+el.innerText).toLowerCase().includes(q);el.classList.toggle('hidden',!ok);if(ok)n++});empty.style.display=n?'none':'block'});
+  </script>
+</body>
+</html>
