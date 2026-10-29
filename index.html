@@ -23,6 +23,76 @@
     .dashboard{margin-left:auto;margin-right:auto}
     .form-action{border:2px solid var(--cyan)!important;background:linear-gradient(145deg,#f4fcff,#e5f7fd)!important;box-shadow:0 10px 28px rgba(10,169,224,.14)}
     .form-action h3{font-size:1.08rem}.form-steps{display:grid;gap:7px;margin:2px 0 15px}.form-step{display:flex;align-items:center;gap:9px;font-size:.82rem;font-weight:750}.form-step b{width:22px;height:22px;border-radius:50%;display:grid;place-items:center;background:var(--blue);color:#fff;font-size:.7rem;flex:0 0 auto}.form-action .actions{margin-top:auto}
+
+    /* Compact workspace layout, aligned with the Sales Submission portal */
+    :root{--gold:#c59a46;--sidebar:#071f34;--surface:#fff;--soft:#f5f7fa}
+    body{background:var(--soft);color:#18242d}
+    .top{position:fixed;inset:0 auto 0 0;width:248px;border:0;border-right:1px solid rgba(255,255,255,.08);background:var(--sidebar);box-shadow:12px 0 32px rgba(4,31,53,.08)}
+    .topin{width:100%;height:100%;padding:30px 22px;display:flex;flex-direction:column;align-items:stretch;gap:26px}
+    .logo{width:176px;background:#fff;border-radius:12px;padding:10px 12px}
+    .desk-nav{display:grid;width:100%;gap:6px;margin:2px 0 auto}
+    .desk-nav:before{content:"WELCOME KIT";padding:0 12px 8px;color:#7ea0b8;font-size:.66rem;font-weight:900;letter-spacing:.16em}
+    .desk-nav a{display:flex;align-items:center;color:#c9d8e3;font-size:.9rem;padding:11px 12px;border-radius:10px}
+    .desk-nav a:hover{background:rgba(255,255,255,.08);color:#fff}
+    .search{order:3;width:100%;margin:0}.search span{color:#9bb1c0}.search input{border-color:rgba(255,255,255,.12);background:rgba(255,255,255,.07);color:#fff}.search input::placeholder{color:#91a8b8}
+    main,.footer{margin-left:248px}.wrap{width:min(1050px,calc(100% - 56px))}
+    .welcome{padding:34px 0 18px}.welcome-card{min-height:260px;border-radius:20px;grid-template-columns:1.3fr .7fr;background-image:linear-gradient(90deg,rgba(5,46,76,.99),rgba(7,95,145,.92)),url("https://d2pe9phj4tmsjo.cloudfront.net/uploads/images/About+Top+Background.png");box-shadow:0 18px 50px rgba(5,46,76,.14)}
+    .welcome-copy{padding:36px}.welcome h1{font-size:clamp(2rem,4vw,3.1rem);margin:8px 0 11px}.welcome p{font-size:.96rem;max-width:570px}.deadline{border-radius:8px;padding:7px 11px}
+    .welcome-side{display:flex;align-items:stretch;padding:22px;background:rgba(2,25,42,.24)}.welcome-side:before,.welcome-side:after{display:none}
+    .quick-start{position:relative;z-index:2;width:100%;display:grid;align-content:center;gap:8px}.quick-start>span{color:#8eddf7;font-size:.7rem;font-weight:900;letter-spacing:.13em;text-transform:uppercase;margin-bottom:2px}.quick-start a{display:flex;align-items:center;gap:9px;text-decoration:none;color:#fff;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.14);padding:10px 12px;border-radius:9px;font-size:.82rem;font-weight:800}.quick-start a:hover{background:rgba(255,255,255,.16)}.quick-start b{display:grid;place-items:center;width:22px;height:22px;border-radius:7px;background:var(--cyan);color:#052e4b;font-size:.7rem}
+    .dashboard{grid-template-columns:1fr 285px;gap:14px;margin-bottom:22px}.box{border-radius:16px;box-shadow:none}.check-box,.help-box{padding:21px}.help-box{background:#edf7fb}.checks{gap:3px 14px}.check{padding:7px 3px;font-size:.86rem}
+    .stage{border-radius:17px;margin-bottom:16px;box-shadow:none}.stage-head{grid-template-columns:50px 1fr auto;gap:14px;padding:17px 20px;background:#fff}.num{width:44px;height:44px;border-radius:12px;font-size:1rem;box-shadow:none}.stage-head h2{font-size:1.2rem}.stage-head p{font-size:.82rem}.stage-body{padding:18px 20px 21px}.stage-tag{background:#eef5f8;color:#416277}
+    .tiles{gap:10px}.tile{border-radius:13px;padding:15px;box-shadow:none}.tile:after{display:none}.tile-top{margin-bottom:9px}.icon{width:38px;height:38px;border-radius:10px;font-size:1rem;box-shadow:none}.tile p{margin:4px 0 10px}.directory{margin-top:14px;padding:17px;border-radius:14px;background:#f2f8fb}.dept-grid{gap:8px}.dept-card{border-radius:11px;padding:12px;box-shadow:none}.group-block{border-radius:11px}.sop summary{padding-top:13px;padding-bottom:13px}.faq{margin-top:28px}.faq details{border-radius:10px}.faq summary{padding:13px 15px}.important{display:none}
+    #stage1 .tiles{grid-template-columns:repeat(2,1fr)}
+    .footer{padding:22px 0;border-top-width:3px}
+    @media(max-width:900px){.top{position:sticky;inset:auto;width:auto;background:#fff;border-top:4px solid var(--cyan);border-right:0;border-bottom:1px solid var(--line);box-shadow:none}.topin{width:min(100% - 30px,1120px);height:66px;padding:0;display:flex;flex-direction:row;align-items:center;gap:14px}.logo{width:160px;padding:0;border-radius:0}.search{order:0;width:210px;margin-left:auto}.search input{background:#f7fafb;border-color:var(--line);color:var(--ink)}.search input::placeholder{color:#7c8991}main,.footer{margin-left:0}.wrap{width:min(100% - 30px,1050px)}.welcome-card{grid-template-columns:1fr}.welcome-side{display:block;padding:18px 26px}.quick-start{grid-template-columns:repeat(3,1fr)}.quick-start>span{grid-column:1/-1}.dashboard{grid-template-columns:1fr}.tiles,.dept-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:620px){.topin{height:60px}.search{width:42px}.welcome{padding-top:14px}.welcome-card{min-height:0}.welcome-copy{padding:24px 20px}.welcome h1{font-size:2.08rem}.welcome-side{display:block;padding:16px 20px}.quick-start{grid-template-columns:1fr}.quick-start>span{grid-column:auto}.dashboard{gap:10px}.stage-head{grid-template-columns:44px 1fr;padding:15px}.stage-body{padding:14px}.tiles,.dept-grid,#stage1 .tiles{grid-template-columns:1fr}.footer{display:none}}
+
+    /* V11 — a genuinely new, editorial workspace experience */
+    .workspace-top{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:25px 0 0;color:#75838d;font-size:.76rem;font-weight:750}.workspace-top b{color:#17364d}.workspace-status{display:flex;align-items:center;gap:8px}.workspace-status i{width:8px;height:8px;border-radius:50%;background:#20aa72;box-shadow:0 0 0 5px rgba(32,170,114,.1)}
+    .welcome{padding-top:14px}.welcome-card{min-height:430px;background:#fff;color:var(--ink);grid-template-columns:1.05fr .95fr;box-shadow:0 24px 70px rgba(10,40,60,.12)}.welcome-copy{display:flex;flex-direction:column;justify-content:center;padding:54px 50px}.kicker{color:var(--blue)}.welcome h1{max-width:590px;font-size:clamp(2.8rem,5.4vw,4.85rem);line-height:.92;color:#0a2e48;margin:13px 0 22px}.welcome p{color:#63737e;font-size:1.03rem;max-width:520px}.deadline{align-self:flex-start;background:#fff7e8;border:1px solid #ecd29b;color:#5b4a27;margin-top:25px}.deadline b{color:#9a6d17}.welcome-side{position:relative;min-height:430px;padding:30px;background:linear-gradient(180deg,rgba(5,42,69,.05),rgba(5,42,69,.86)),url("https://d2pe9phj4tmsjo.cloudfront.net/uploads/images/About+Second+Section.png") center/cover}.welcome-side:after{content:"YOUR FIRST 3 ACTIONS";display:block;position:absolute;left:30px;top:30px;color:#fff;font-size:.7rem;font-weight:900;letter-spacing:.16em}.quick-start{align-content:end}.quick-start>span{display:none}.quick-start a{padding:15px 16px;background:rgba(7,31,51,.7);backdrop-filter:blur(9px);border-color:rgba(255,255,255,.2);font-size:.88rem}.quick-start b{width:27px;height:27px;border-radius:50%;background:var(--gold);color:#fff}
+    .dashboard{margin-top:-1px;padding-top:0;grid-template-columns:1fr 290px}.box{border-color:#e4e8eb}.check-box{border-radius:0 0 0 18px}.help-box{border-radius:0 0 18px 0;background:#092f4a;color:#fff;border-color:#092f4a}.help-box h3{font-size:1.05rem}.help-box p{color:#bcd0dd}.help-box .primary{background:#fff;color:#08314e}.bar{height:4px}.check input{border-radius:50%}
+    .culture-strip{display:grid;grid-template-columns:1fr 1fr;min-height:190px;margin:34px 0;border-radius:18px;overflow:hidden;background:#0a2f49;color:#fff}.culture-photo{background:linear-gradient(90deg,transparent,rgba(10,47,73,.15)),url("https://d2pe9phj4tmsjo.cloudfront.net/uploads/images/About+Top+Background.png") center/cover}.culture-copy{display:flex;flex-direction:column;justify-content:center;padding:30px 36px}.culture-copy span{color:#86ddf7;font-size:.7rem;font-weight:900;letter-spacing:.15em}.culture-copy h2{margin:8px 0 7px;font-size:1.65rem;line-height:1.1}.culture-copy p{margin:0;color:#bfd0da;font-size:.88rem}
+    .workspace-tabs{position:sticky;top:18px;z-index:20;display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin:0 0 15px;padding:7px;background:rgba(255,255,255,.92);border:1px solid #e2e8eb;border-radius:15px;box-shadow:0 12px 35px rgba(9,47,74,.1);backdrop-filter:blur(15px)}.workspace-tab{border:0;border-radius:10px;padding:12px 14px;background:transparent;color:#62727d;font-weight:850;cursor:pointer}.workspace-tab small{display:block;font-size:.65rem;font-weight:700;color:#93a0a8;margin-top:2px}.workspace-tab.active{background:#092f4a;color:#fff}.workspace-tab.active small{color:#a9c2d1}
+    .stage{display:none;border:0;border-radius:20px;box-shadow:0 18px 55px rgba(14,43,62,.08);animation:panelIn .35s ease}.stage.active{display:block}.stage-head{min-height:128px;padding:26px 30px;background:#0a2f49;color:#fff;border:0}.num{background:transparent;border:1px solid rgba(255,255,255,.35);color:#86ddf7}.stage-head h2{font-size:1.75rem}.stage-head p{color:#bfd0da}.stage-tag{background:rgba(255,255,255,.1);color:#fff}.stage-body{padding:25px 30px 32px}.tiles,#stage1 .tiles{display:block}.tile{display:grid;grid-template-columns:54px minmax(0,1fr) auto;column-gap:15px;align-items:center;min-height:92px;padding:17px 4px;border:0;border-bottom:1px solid #e6ecef;border-radius:0;background:transparent}.tile:last-child{border-bottom:0}.tile-top{grid-column:1;grid-row:1/4;margin:0}.tile h3{grid-column:2;grid-row:1;margin:0}.tile>p,.tile>.facts,.tile>.form-steps{grid-column:2;grid-row:2;margin:3px 0 0}.tile>.actions,.tile>.detail-btn{grid-column:3;grid-row:1/3;justify-self:end}.tile.required{border-color:#dce6eb;background:transparent}.tile.form-action{margin:8px 0;padding:20px;border:0!important;border-radius:14px!important;background:#edf8fc!important;box-shadow:none}.tile.form-action .form-steps{display:flex;flex-wrap:wrap;gap:7px 15px}.tile.form-action .form-step b{background:var(--gold)}
+    .directory{padding:0;margin-top:26px;border:0;background:transparent}.directory-head{padding:0 0 12px;border-bottom:1px solid #dae3e8}.dept-grid{display:block}.dept-card{display:grid;grid-template-columns:44px minmax(0,1fr) auto;align-items:center;gap:0 12px;padding:13px 3px;border:0;border-bottom:1px solid #e7ecef;border-radius:0;background:transparent;box-shadow:none}.dept-icon{grid-column:1;grid-row:1/3;margin:0}.dept-card h4{grid-column:2;grid-row:1}.dept-card p{grid-column:2;grid-row:2;margin:2px 0}.dept-card>.actions{grid-column:3;grid-row:1/3;justify-content:flex-end;max-width:260px}.directory-foot{padding-top:14px}.group-block{border:0;border-bottom:1px solid #e0e7ea;border-radius:0}.group-block summary{padding-left:3px}.group-grid{padding:0 0 15px}.group{background:#f2f6f8}.sop{border-top:0}.sop details{border-bottom-color:#e1e7ea}.sop summary{font-size:.95rem}.faq{display:none;margin:15px 0 85px;padding:28px 30px;background:#fff;border-radius:20px;box-shadow:0 18px 55px rgba(14,43,62,.08)}.faq.active{display:block;animation:panelIn .35s ease}.faq .eyebrow{color:var(--gold)}.faq h2{font-size:1.8rem}.faq details{border:0;border-bottom:1px solid #e5eaed;border-radius:0;margin:0}.faq summary{padding:15px 3px}.answer{padding-left:3px}.mobile-nav a.active{color:var(--cyan)}
+    @keyframes panelIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+    @media(max-width:900px){.workspace-top{padding-top:16px}.welcome-card{grid-template-columns:1fr;min-height:0}.welcome-copy{padding:38px}.welcome h1{font-size:3.5rem}.welcome-side{min-height:300px}.dashboard{grid-template-columns:1fr}.check-box,.help-box{border-radius:15px}.culture-strip{grid-template-columns:.8fr 1.2fr}.workspace-tabs{top:75px}.stage-head{padding:22px}.stage-body{padding:20px}.tile{grid-template-columns:50px 1fr}.tile>.actions,.tile>.detail-btn{grid-column:2;grid-row:auto;justify-self:start;margin-top:9px}.dept-card{grid-template-columns:42px 1fr}.dept-card>.actions{grid-column:2;grid-row:3;justify-content:flex-start;margin-top:8px;max-width:none}}
+    @media(max-width:620px){.workspace-top{display:none}.welcome-card{border-radius:16px}.welcome-copy{padding:27px 22px}.welcome h1{font-size:2.65rem;line-height:.95;margin:10px 0 16px}.welcome-side{min-height:330px;padding:22px}.welcome-side:after{left:22px;top:22px}.dashboard{margin-top:10px}.check-box,.help-box{border-radius:14px}.culture-strip{grid-template-columns:1fr;min-height:300px;margin:22px 0}.culture-photo{min-height:160px}.culture-copy{padding:23px}.workspace-tabs{position:static;grid-template-columns:1fr;padding:5px}.workspace-tab{display:flex;align-items:center;justify-content:space-between;text-align:left;padding:11px 13px}.workspace-tab small{display:inline}.stage{border-radius:15px}.stage-head{grid-template-columns:40px 1fr;padding:19px 17px;min-height:105px}.stage-head h2{font-size:1.35rem}.stage-body{padding:14px 17px 22px}.tile{grid-template-columns:45px 1fr;padding:15px 0}.tile.form-action{padding:16px 13px}.tile.form-action .form-steps{display:grid}.dept-card{padding:12px 0}.dept-card>.actions{grid-column:1/-1;margin-top:10px}.faq{padding:20px 17px;border-radius:15px}.mobile-nav{grid-template-columns:repeat(4,1fr)}}
+
+    /* Keep V11's layout; make actions unmistakably clickable */
+    .detail-btn{min-height:42px;padding:9px 13px;border:0;border-radius:9px;background:var(--blue);color:#fff;text-decoration:none;display:inline-flex;align-items:center;justify-content:center}.detail-btn:hover{background:var(--navy)}
+    @media(max-width:620px){.tile>.actions,.tile>.detail-btn{width:100%}.tile>.actions{display:grid}.tile>.actions .btn,.tile>.actions .primary,.tile>.detail-btn{width:100%;min-height:46px}.group .btn,.group .primary{min-height:44px}.dept-card>.actions .btn{min-height:44px}}
+
+    /* V14 mobile entry screen — desktop layout remains unchanged */
+    .mobile-start{display:none}
+    @media(max-width:620px){
+      .welcome-side,.dashboard,.culture-strip,.workspace-tabs{display:none}
+      .welcome-card{display:block;min-height:0;background:#fff}.welcome-copy{padding:25px 21px}.welcome h1{font-size:2.3rem;line-height:.95}.welcome p{font-size:.9rem;line-height:1.45}.deadline{width:100%;justify-content:center;text-align:center}
+      .mobile-start{display:block;margin:0 auto 18px;padding:20px 17px;background:#092f4a;color:#fff;border-radius:17px;box-shadow:0 16px 35px rgba(9,47,74,.18)}
+      .mobile-start .mobile-kicker{display:block;color:#7ed8f4;font-size:.68rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase}.mobile-start h2{margin:7px 0 4px;font-size:1.45rem;line-height:1.1}.mobile-start>p{margin:0 0 15px;color:#bcd0dc;font-size:.84rem}
+      .mobile-actions{display:grid;gap:9px}.mobile-action{display:grid;grid-template-columns:34px 1fr auto;align-items:center;gap:10px;width:100%;min-height:58px;padding:10px 12px;border:1px solid rgba(255,255,255,.16);border-radius:12px;background:#fff;color:#15384f;text-align:left;text-decoration:none;font:inherit;font-weight:900;cursor:pointer}.mobile-action b{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--cyan);color:#06324e;font-size:.78rem}.mobile-action span{font-size:.9rem;line-height:1.25}.mobile-action i{font-style:normal;color:var(--blue);font-size:1.15rem}.mobile-action.form b{background:var(--gold);color:#fff}.mobile-help{display:flex;justify-content:center;margin-top:13px;color:#d7e6ee;font-size:.8rem;font-weight:800}.mobile-help a{color:#fff}
+      .stage{margin-top:10px}.stage-head{position:sticky;top:60px;z-index:15}.stage-head p{font-size:.78rem}.stage-tag{display:none}.stage-body{padding-top:10px}
+      .mobile-detail{display:none}.mobile-detail.mobile-open{display:block;animation:panelIn .3s ease}
+      .faq{margin-bottom:82px}.mobile-nav{box-shadow:0 -10px 28px rgba(9,47,74,.1)}
+    }
+
+    /* V15 iPhone layout repair */
+    @media(max-width:620px){
+      html{-webkit-text-size-adjust:100%;text-size-adjust:100%;overflow-x:hidden}
+      body{overflow-x:hidden;padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+      .top{position:sticky;top:0;z-index:100;width:100%;height:64px;overflow:hidden;background:#fff}
+      .topin{width:100%;height:60px;padding:0 16px;margin:0;display:flex;align-items:center;justify-content:flex-start;overflow:hidden}
+      .logo{display:block;width:150px;max-width:150px;height:auto;margin:0;padding:0;flex:0 0 auto;background:transparent}
+      .desk-nav,.search{display:none!important}
+      main{width:100%;margin:0;overflow:hidden}
+      .welcome{padding:12px 0 10px}.welcome-card{width:100%;border-radius:16px}.welcome-copy{padding:24px 20px}.welcome .kicker{font-size:.68rem;line-height:1.3}.welcome h1{font-size:2.25rem;line-height:.96;margin:10px 0 14px}.welcome p{font-size:.91rem;line-height:1.45}.deadline{margin-top:18px;padding:10px 11px;font-size:.78rem;line-height:1.35}
+      .mobile-start{margin-top:0;padding:19px 16px;border-radius:16px}.mobile-start h2{font-size:1.4rem}.mobile-start>p{line-height:1.45}.mobile-action{grid-template-columns:32px minmax(0,1fr) 20px;min-height:58px;padding:10px 11px}.mobile-action span{font-size:.87rem}.mobile-action b{width:29px;height:29px}
+      .stage{margin-top:16px;overflow:hidden}.stage-head{position:static!important;top:auto;z-index:auto;min-height:0;padding:18px 16px;grid-template-columns:42px minmax(0,1fr);gap:12px}.stage-head h2{font-size:1.28rem;line-height:1.15}.stage-head p{font-size:.78rem;line-height:1.4}.num{width:40px;height:40px}.stage-body{padding:12px 16px 22px}
+      .tile{grid-template-columns:44px minmax(0,1fr);column-gap:12px;min-height:0;padding:16px 0}.tile-top{width:44px;overflow:visible}.tile-top .badge{display:none}.tile h3{font-size:1rem;line-height:1.25}.tile>p,.tile>.facts,.tile>.form-steps{font-size:.82rem;line-height:1.45}.tile>.actions,.tile>.detail-btn{grid-column:1/-1;margin:10px 0 0;width:100%}.tile>.actions .btn,.tile>.actions .primary,.tile>.detail-btn{width:100%;min-height:46px;font-size:.84rem}
+      .directory{padding:14px}.directory-head{margin-bottom:10px}.dept-card{grid-template-columns:40px minmax(0,1fr)}.dept-card>.actions{grid-column:1/-1;width:100%;margin-top:9px}.group-grid{grid-template-columns:1fr}
+      .mobile-nav{left:0;right:0;bottom:0;width:100%;z-index:120;padding:8px 8px calc(8px + env(safe-area-inset-bottom));grid-template-columns:repeat(4,minmax(0,1fr))}.mobile-nav a{min-width:0;font-size:.66rem}.mobile-nav b{font-size:.92rem}
+    }
   </style>
 </head>
 <body>
@@ -42,24 +112,41 @@
 </div>
 </header>
   <main>
+    <div class="wrap workspace-top">
+<span><b>New Joiner Hub</b> / Onboarding workspace</span>
+<span class="workspace-status"><i></i> Updated guide</span>
+</div>
     <section class="welcome">
 <div class="wrap">
 <div class="welcome-card">
 <div class="welcome-copy">
 <div class="kicker">PropNex Malaysia · New Joiner Hub</div>
 <h1>Welcome, New PropNexian.</h1>
-<p>Follow your onboarding journey, complete the required steps and find every important link in one place.</p>
+<p>Complete the required actions first. Open the details only when you need them.</p>
 <div class="deadline">
 <b>First priority</b> Complete the required items within 3 working days.</div>
 </div>
 <div class="welcome-side">
-<div class="step-mark">
-<strong>3</strong>
-<span>simple stages</span>
+<div class="quick-start">
+<span>Start here</span>
+<a href="#groups"><b>1</b> Join required groups</a>
+<a href="#stage2"><b>2</b> Complete &amp; email the form</a>
+<a href="https://forms.gle/B93D1Xa5xJb9Tkhw5"><b>3</b> Book your photoshoot</a>
 </div>
 </div>
 </div>
 </div>
+</section>
+    <section class="wrap mobile-start" aria-label="Start here">
+<span class="mobile-kicker">New joiner · Start here</span>
+<h2>Complete these 3 actions first.</h2>
+<p>Tap each button below. Other information can be checked later.</p>
+<div class="mobile-actions">
+<button class="mobile-action" type="button" data-jump="groups" data-stage="stage1"><b>1</b><span>Join Required WhatsApp Groups</span><i>→</i></button>
+<button class="mobile-action form" type="button" data-jump="mandatory-form" data-stage="stage2"><b>2</b><span>Complete &amp; Email Mandatory Form</span><i>→</i></button>
+<a class="mobile-action" href="https://forms.gle/B93D1Xa5xJb9Tkhw5"><b>3</b><span>Book Corporate Photoshoot</span><i>↗</i></a>
+</div>
+<div class="mobile-help">Need help?&nbsp; <a href="https://wa.me/60123088954">WhatsApp Negotiator Affairs</a></div>
 </section>
     <section class="wrap dashboard" id="checklist" data-search="checklist onboarding required progress">
 <div class="box check-box">
@@ -116,24 +203,25 @@
 </aside>
 </section>
     <section class="wrap">
-<section class="journey-intro" aria-label="Your onboarding journey">
-<div class="journey-photo" role="img" aria-label="PropNex Malaysia awards celebration"></div>
-<div class="journey-route">
-<div class="eyebrow">Your onboarding journey</div>
-<h2>Start with these 3 steps.</h2>
-<div class="route-grid">
-<a class="route-card" href="#stage1"><span class="route-icon">💬</span><span><strong>Get connected</strong>Groups, contacts and training</span><b>→</b></a>
-<a class="route-card" href="#stage2"><span class="route-icon">✓</span><span><strong>Complete your setup</strong>Registration, photo and form</span><b>→</b></a>
-<a class="route-card" href="#stage3"><span class="route-icon">◆</span><span><strong>Know the rules</strong>Renewal, reassignment and PDPA</span><b>→</b></a>
-</div>
+      <section class="culture-strip" aria-label="PropNex Malaysia onboarding">
+<div class="culture-photo" role="img" aria-label="PropNex Malaysia team"></div>
+<div class="culture-copy">
+<span>ONE PLACE. CLEAR NEXT STEPS.</span>
+<h2>Everything you need for your first month.</h2>
+<p>Use the three workspaces below. Complete the action, then return here whenever you need a contact, form or rule.</p>
 </div>
 </section>
-      <article class="stage" id="stage1" data-search="connect whatsapp groups listing announcement project open house directory propnex u training">
+      <nav class="workspace-tabs" aria-label="Welcome kit sections" role="tablist">
+<button class="workspace-tab active" type="button" data-tab="stage1"><span>01 · Groups &amp; Contacts</span><small>Start here</small></button>
+<button class="workspace-tab" type="button" data-tab="stage2"><span>02 · Registration &amp; Forms</span><small>Complete setup</small></button>
+<button class="workspace-tab" type="button" data-tab="stage3"><span>03 · Rules &amp; FAQ</span><small>Keep for reference</small></button>
+</nav>
+      <article class="stage active" id="stage1" data-search="connect whatsapp groups listing announcement project open house directory contacts">
 <div class="stage-head">
 <div class="num">01</div>
 <div>
-<h2>Get Connected</h2>
-<p>Join the right channels and know where to find support.</p>
+<h2>Groups &amp; Contacts</h2>
+<p>Join the required groups and find the right department.</p>
 </div>
 <span class="stage-tag">Start here</span>
 </div>
@@ -146,7 +234,7 @@
 </div>
 <h3>WhatsApp Groups</h3>
 <p>Announcements · Training · NA updates</p>
-<button class="detail-btn" data-open="groups">View group categories ↓</button>
+<button class="detail-btn" data-open="groups">Open WhatsApp Groups →</button>
 </section>
 <section class="tile">
 <div class="tile-top">
@@ -155,22 +243,11 @@
 <h3>Department Directory</h3>
 <p>Find the right department instantly.</p>
 <div class="actions">
-<a class="btn" href="#department-contacts">Choose a department ↓</a>
-</div>
-</section>
-<section class="tile">
-<div class="tile-top">
-<span class="icon">▶</span>
-</div>
-<h3>PropNex U</h3>
-<p>Your online training platform.</p>
-<div class="actions">
-<a class="btn" href="https://u-mypropnex.thinkific.com/">Open platform ↗</a>
-<a class="btn" href="https://drive.google.com/file/d/1w5qFhiAF6hViMpE2cfNBq9QhRIOL5Bz8/view?usp=drive_link">Guidelines ↗</a>
+<a class="btn" href="#department-contacts">Open Contact Directory →</a>
 </div>
 </section>
 </div>
-        <section class="directory" id="department-contacts" data-search="department contact hotline negotiator affairs admin subsales claim sector project event training operations it marketing">
+        <section class="directory mobile-detail" id="department-contacts" data-search="department contact hotline negotiator affairs admin subsales claim sector project event training operations it marketing">
 <div class="directory-head">
 <div>
 <h3>Who should I contact?</h3>
@@ -268,7 +345,7 @@
 <a class="btn" href="https://drive.google.com/file/d/1bDeXcCd6XlvXkzJ4FjkEq42_n6iBpwi7/view?usp=drive_link">View full directory PDF ↗</a>
 </div>
 </section>
-        <div id="groups" style="margin-top:16px">
+        <div class="mobile-detail" id="groups" style="margin-top:16px">
 <details class="group-block" open>
 <summary>Essential company channels</summary>
 <div class="group-grid">
@@ -355,8 +432,8 @@
 <div class="stage-head">
 <div class="num">02</div>
 <div>
-<h2>Complete Your Setup</h2>
-<p>Finish your profile, registration and mandatory paperwork.</p>
+<h2>Registration &amp; Forms</h2>
+<p>Complete the required registration, photo and form.</p>
 </div>
 <span class="stage-tag">Action required</span>
 </div>
@@ -393,9 +470,9 @@
 </div>
 <h3>REN / PEA Application</h3>
 <p>Find the correct application route.</p>
-<button class="detail-btn" data-open="applications">View application SOP ↓</button>
+<button class="detail-btn" data-open="applications">Choose Application Type →</button>
 </section>
-<section class="tile required form-action">
+<section class="tile required form-action" id="mandatory-form">
 <div class="tile-top">
 <span class="icon">✎</span>
 <span class="badge">Must Complete</span>
@@ -413,7 +490,7 @@
 </div>
 </section>
 </div>
-        <div class="sop" id="applications">
+        <div class="sop mobile-detail" id="applications">
 <details>
 <summary>REN application · Malaysian</summary>
 <div class="sop-content">
@@ -475,8 +552,8 @@
 <div class="stage-head">
 <div class="num">03</div>
 <div>
-<h2>Know the Rules</h2>
-<p>Understand reassignment, renewal and data-protection responsibilities.</p>
+<h2>Rules &amp; FAQ</h2>
+<p>Open only the rule or answer you need.</p>
 </div>
 <span class="stage-tag">Keep for reference</span>
 </div>
@@ -488,7 +565,7 @@
 </div>
 <h3>Reassignment</h3>
 <p>Moving to PropNex from another agency.</p>
-<button class="detail-btn" data-open="rules">View reassignment SOP ↓</button>
+<button class="detail-btn" data-open="rules">Open Reassignment SOP →</button>
 </section>
 <section class="tile">
 <div class="tile-top">
@@ -496,7 +573,7 @@
 </div>
 <h3>Licence Renewal</h3>
 <p>October to March.</p>
-<button class="detail-btn" data-open="rules">View renewal rules ↓</button>
+<button class="detail-btn" data-open="rules">Open Renewal Rules →</button>
 </section>
 <section class="tile required">
 <div class="tile-top">
@@ -505,10 +582,10 @@
 </div>
 <h3>PDPA Compliance</h3>
 <p>Consent · Privacy · Opt-outs</p>
-<a class="btn" href="https://drive.google.com/file/d/1ks0U7xJsPzaVBvD1OkX4sbBSpl0rRKC9/view?usp=drive_link">Read full memo ↗</a>
+<a class="btn" href="https://drive.google.com/file/d/1ks0U7xJsPzaVBvD1OkX4sbBSpl0rRKC9/view?usp=drive_link">Read PDPA Memo ↗</a>
 </section>
 </div>
-        <div class="sop" id="rules">
+        <div class="sop mobile-detail" id="rules">
 <details>
 <summary>REN reassignment · Active & inactive</summary>
 <div class="sop-content">
@@ -654,21 +731,29 @@
 </div>
 </footer>
   <nav class="mobile-nav">
-<a href="#stage1">
-<b>⌂</b>Home</a>
-<a href="#checklist">
-<b>✓</b>Checklist</a>
+<a class="active" href="#stage1">
+<b>01</b>Groups</a>
+<a href="#stage2">
+<b>02</b>Setup</a>
+<a href="#stage3">
+<b>03</b>Rules</a>
 <a href="https://wa.me/60123088954">
-<b>◉</b>Contact NA</a>
+<b>◉</b>Ask NA</a>
 </nav>
   <script>
     document.querySelectorAll('a[href^="http"]').forEach(a=>{a.target='_blank';a.rel='noopener noreferrer'});
     const boxes=[...document.querySelectorAll('#checks input')],saved=JSON.parse(localStorage.getItem('pn-welcome-progress')||'{}');
     function update(){const n=boxes.filter(b=>b.checked).length;document.querySelector('#score').textContent=n+' of '+boxes.length;document.querySelector('#fill').style.width=Math.round(n/boxes.length*100)+'%'}
     boxes.forEach(b=>{b.checked=!!saved[b.dataset.key];b.addEventListener('change',()=>{saved[b.dataset.key]=b.checked;localStorage.setItem('pn-welcome-progress',JSON.stringify(saved));update()})});update();
-    document.querySelectorAll('[data-open]').forEach(btn=>btn.addEventListener('click',()=>{const el=document.getElementById(btn.dataset.open);el.scrollIntoView({behavior:'smooth',block:'start'});const d=el.querySelector('details');if(d)d.open=true}));
+    const stages=[...document.querySelectorAll('.stage')],tabs=[...document.querySelectorAll('.workspace-tab')],faq=document.querySelector('.faq'),mobileTabs=[...document.querySelectorAll('.mobile-nav a[href^="#stage"]')];
+    function activate(id,scroll=false){stages.forEach(s=>s.classList.toggle('active',s.id===id));tabs.forEach(t=>{const on=t.dataset.tab===id;t.classList.toggle('active',on);t.setAttribute('aria-selected',on)});mobileTabs.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+id));faq.classList.toggle('active',id==='stage3');if(scroll)document.querySelector('.workspace-tabs').scrollIntoView({behavior:'smooth',block:'start'})}
+    tabs.forEach(t=>t.addEventListener('click',()=>activate(t.dataset.tab)));
+    document.querySelectorAll('a[href="#stage1"],a[href="#stage2"],a[href="#stage3"]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();activate(a.getAttribute('href').slice(1),true)}));
+    document.querySelectorAll('[data-open]').forEach(btn=>btn.addEventListener('click',()=>{const el=document.getElementById(btn.dataset.open);el.classList.add('mobile-open');el.scrollIntoView({behavior:'smooth',block:'start'});const d=el.querySelector('details');if(d)d.open=true}));
+    document.querySelectorAll('[data-jump]').forEach(btn=>btn.addEventListener('click',()=>{activate(btn.dataset.stage);const el=document.getElementById(btn.dataset.jump);el.classList.add('mobile-open');requestAnimationFrame(()=>el.scrollIntoView({behavior:'smooth',block:'start'}))}));
     const search=document.querySelector('#search'),items=[...document.querySelectorAll('[data-search]')],empty=document.querySelector('#empty');
-    search.addEventListener('input',()=>{const q=search.value.trim().toLowerCase();let n=0;items.forEach(el=>{const ok=!q||(el.dataset.search+' '+el.innerText).toLowerCase().includes(q);el.classList.toggle('hidden',!ok);if(ok)n++});empty.style.display=n?'none':'block'});
+    search.addEventListener('input',()=>{const q=search.value.trim().toLowerCase();let n=0,first=null;items.forEach(el=>{const ok=!q||(el.dataset.search+' '+el.innerText).toLowerCase().includes(q);el.classList.toggle('hidden',!ok);if(ok){n++;if(!first&&el.classList.contains('stage'))first=el.id}});if(q&&first)activate(first);empty.style.display=n?'none':'block'});
+    activate(location.hash.match(/^#stage[123]$/)?.[0].slice(1)||'stage1');
   </script>
 </body>
 </html>
